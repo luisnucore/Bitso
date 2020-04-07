@@ -21,7 +21,7 @@ resource "aws_subnet" "BitsoPublicSubnet" {
 }
 
 resource "aws_route_table" "BitsoRouteTable" {
-    vpc_id = "${aws_vpc.main-vpc.id}"
+    vpc_id = "${aws_vpc.BitsoVPC.id}"
 
     route {
         //associated subnet can reach everywhere
