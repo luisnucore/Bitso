@@ -8,7 +8,4 @@ resource "aws_instance" "BitsoEC2" {
               echo "Bitso Challenge || Luis Rios" > index.html
               nohup busybox httpd -f -p 8080 &
               EOF
-  tags = {
-    Name = "BitsoEC2"
-  }
 }
