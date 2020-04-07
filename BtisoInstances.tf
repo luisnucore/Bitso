@@ -19,7 +19,7 @@ resource "aws_instance" "BitsoEC2" {
                   agent         = false
               }
   provisioner "remote-exec" {
-                  inline = [ DD_API_KEY=<user_api_key> bash -c "$(curl -L https://raw.githubusercontent.com/DataDog/dd-agent/master/packaging/datadog-agent/source/install_agent.sh)"
+                  inline = [ DD_API_KEY=<user_api_key> bash -c "$(curl -L https://raw.githubusercontent.com/DataDog/dd-agent/master/packaging/datadog-agent/source/install_agent.sh)",
 
                   ]
 
