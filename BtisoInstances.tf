@@ -7,7 +7,7 @@ resource "aws_instance" "BitsoEC2" {
   user_data = <<-EOF
               #!/bin/bash
               echo "<h1>Bitso Challenge || Luis Rios || Cheers! :)" > index.html
-              nohup busybox httpd -f -p 8080 &
+              nohup busybox httpd -f -p 80 &
               DD_AGENT_MAJOR_VERSION=7 DD_API_KEY=9c69c53d75900006ea86a2870429b15c bash -c " $(curl -L https://raw.githubusercontent.com/DataDog/datadog-agent/master/cmd/agent/install_script.sh)"
 	      EOF
         tags = {
