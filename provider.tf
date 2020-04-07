@@ -1,5 +1,6 @@
 variable "id" {} #these 2 variables are proovided  with therraform execution
 variable "key"{}
+variable "pvt_key" {}
 
 provider "aws" {
   region = "us-west-2"
