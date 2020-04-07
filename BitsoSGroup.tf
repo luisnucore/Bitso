@@ -1,5 +1,4 @@
 resource "aws_security_group" "BitsoSG" {
-  vpc_id = "${aws_vpc.BitsoVPC.id}"
 
   egress {
         from_port = 0
