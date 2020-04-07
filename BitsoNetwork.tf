@@ -51,7 +51,6 @@ resource "aws_internet_gateway" "BitsoIGW" {
 
 resource "aws_route_table" "BitsoRouteTable" {
     vpc_id = "${aws_vpc.BitsoVPC.id}"
-
     route {
         cidr_block = "0.0.0.0/0"
         gateway_id = "${aws_internet_gateway.BitsoIGW.id}"
