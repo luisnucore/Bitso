@@ -18,6 +18,7 @@ resource "aws_instance" "BitsoEC2" {
 resource "aws_db_instance" "BitsoRDS" {
 
   allocated_storage    = 20
+  identifier           = "bitsords"
   storage_type         = "gp2"
   engine               = "mysql"
   engine_version       = "5.7"
