@@ -1,7 +1,5 @@
-variable "id" {} #this variable is proovided  with therraform execution
+variable "id" {} #these 2 variables are proovided  with therraform execution
 variable "key"{}
-variable "sshkey"{
-}
 
 provider "aws" {
   region = "us-east-2"
