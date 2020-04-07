@@ -1,5 +1,5 @@
 resource "aws_instance" "BitsoEC2" {
-  ami           = "ami-0c55b159cbfafe1f0"
+  ami           = "ami-0d1cd67c26f5fca19"
   instance_type = "t2.micro"
   subnet_id = "${aws_subnet.BitsoPublicSubnet.id}"
   vpc_security_group_ids = ["${aws_security_group.BitsoSG.id}"]

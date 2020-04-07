@@ -16,7 +16,7 @@ resource "aws_subnet" "BitsoPublicSubnet" {
     vpc_id = "${aws_vpc.BitsoVPC.id}"
     cidr_block = "10.0.10.0/24"
     map_public_ip_on_launch = "true"
-    availability_zone = "us-east-2"
+    availability_zone = "us-west-2a"
 
 }
 
