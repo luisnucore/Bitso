@@ -1,5 +1,5 @@
 resource "aws_security_group" "BitsoSG" {
-
+  vpc_id = "${aws_vpc.BitsoVPC.id}"
   egress {
         from_port = 0
         to_port = 0
@@ -14,7 +14,5 @@ resource "aws_security_group" "BitsoSG" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags {
-        Name = "BitsoSG"
-    }
+
 }

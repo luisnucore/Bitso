@@ -5,16 +5,11 @@ resource "aws_vpc" "BitsoVPC" {
     enable_classiclink = "false"
     instance_tenancy = "default"
 
-    tags {
-        Name = "BitsoVPC"
-    }
 }
 
 resource "aws_internet_gateway" "BitsoIGW" {
     vpc_id = "${aws_vpc.BitsoVPC.id}"
-    tags {
-        Name = "BitsoIGW"
-    }
+
 }
 
 resource "aws_subnet" "BitsoPublicSubnet" {
@@ -22,9 +17,7 @@ resource "aws_subnet" "BitsoPublicSubnet" {
     cidr_block = "10.0.10.0/24"
     map_public_ip_on_launch = "true"
     availability_zone = "us-east-2"
-    tags {
-        Name = "BitsoPublicSubnet"
-    }
+
 }
 
 resource "aws_route_table" "BitsoRouteTable" {
@@ -37,9 +30,7 @@ resource "aws_route_table" "BitsoRouteTable" {
         gateway_id = "${aws_internet_gateway.BitsoIGW.id}"
     }
 
-    tags {
-        Name = "BitsoRouteTable"
-    }
+
 }
 
 resource "aws_route_table_association" "Subnet-RT-Association"{
