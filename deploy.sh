@@ -6,7 +6,7 @@ if [[ $EUID -eq 0 ]]; then
     echo "Please Provide the AWS Access Key"
     read key
     echo "Please Provide the ssh keyname to be installed in the EC2 instance"
-    reaf keynom
+    read keynom
     exists=$( find / -name terraform 2>&1 | xargs file 2>&1 | grep executable 2>&1 | cut -d ':' -f1 )
     echo $PATH | grep $(dirname $exists) >/dev/null 2>/dev/null
     if [ $? = 0 ] ; then
