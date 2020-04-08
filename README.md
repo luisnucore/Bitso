@@ -7,10 +7,16 @@
  - AWS ssh keyname of the ".pem" you want to install in the EC2 instance
 
 ## Execution
-  - 1.- Access your CentOS Server via CLI as root user
+  - 1.- Access your CentOS via CLI as root user
   - 2.- Install wget using the next command  
     *yum install -y wget*
   - 3.- Copy and Paste the next line in the CLI  
    *wget https://raw.githubusercontent.com/luisnucore/Bitso/master/deploy.sh; chmod 700 deploy.sh; ./deploy.sh*
   - 4.- Provide the Information requested by the script
-  - 5.- Done
+  - 5.- Done  
+
+
+
+### NOTE:
+  - This Instructions work only using a CentOS 7, you can try to execute it in "RedHat Like" under no warranty  
+  - If you are familiar with terraform, you can clone the repository and execute the ".tf" files
