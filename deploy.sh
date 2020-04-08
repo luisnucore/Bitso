@@ -32,7 +32,7 @@ if [[ $EUID -eq 0 ]]; then
       echo "Please verify your credentials and try again"
       exit 1
     fi
-    terraform plan  -var "id=$AWSACCESS_KEY_ID"   -var "key=$AWSSECRET_ACCESS_KEY"
+    terraform plan  -var "id=$AWSACCESS_KEY_ID"   -var "key=$AWSSECRET_ACCESS_KEY" -var "keyname=$nom"
     terraform apply --auto-approve  -var "id=$AWSACCESS_KEY_ID"   -var "key=$AWSSECRET_ACCESS_KEY" -var "keyname=$nom"
 
     echo "The Scrips used to deploy this infrastrucure is located at /opt/bitsochallenge/Bitso/ in this OS"
