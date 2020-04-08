@@ -17,6 +17,7 @@
 
 
 
-### NOTE:
+### NOTES:
   - This Instructions work only using a CentOS 7, you can try to execute it in "RedHat Like" under no warranty  
   - If you are familiar with terraform, you can clone the repository and execute the ".tf" files
+  - In the file: execution-output.txt, you can find en example output when we execute the intrusctions above 
