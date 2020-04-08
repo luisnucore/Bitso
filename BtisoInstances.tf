@@ -3,7 +3,7 @@ resource "aws_instance" "BitsoEC2" {
   instance_type = "t2.micro"
   subnet_id = "${aws_subnet.BitsoPublicSubnet.id}"
   vpc_security_group_ids = ["${aws_security_group.BitsoSG.id}"]
-  key_name = "terrraform-oregon"
+  key_name = "${var.keyname}"
   user_data = <<-EOF
               #!/bin/bash
               echo "<h1>Bitso Challenge || Luis Rios || Cheers! :)" > index.html
