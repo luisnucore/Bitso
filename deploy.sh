@@ -35,7 +35,7 @@ if [[ $EUID -eq 0 ]]; then
     terraform plan  -var "id=$AWSACCESS_KEY_ID"   -var "key=$AWSSECRET_ACCESS_KEY" -var "keyname=$keynom"
     terraform apply --auto-approve  -var "id=$AWSACCESS_KEY_ID"   -var "key=$AWSSECRET_ACCESS_KEY" -var "keyname=$keynom"
 
-    echo "The Scrips used to deploy this infrastrucure is located at /opt/bitsochallenge/Bitso/ in this OS"
+    echo "The Scripts used to deploy this infrastrucure are located at /opt/bitsochallenge/Bitso/ in this OS"
     echo "The Infrastructure has been deployed in AWS, region Oregon, check your AWS console ;)"
     echo "Now you can go ahead and type the in your webbrowser http://$(terraform output instance_ips)"
     echo "you can also access via ssh to the EC2 instance using ssh -i <key.pem> ubuntu@$(terraform output instance_ips)"
