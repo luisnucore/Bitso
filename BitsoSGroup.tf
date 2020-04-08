@@ -34,7 +34,7 @@ resource "aws_security_group" "BitsoRDSSG" {
   ingress {
     from_port   = 3306
     to_port     = 3306
-    protocol    = -"tcp"
+    protocol    = "tcp"
     cidr_blocks = ["10.0.10.0/24"]
   }
 
