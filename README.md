@@ -1,5 +1,6 @@
 # Example Deploying in AWS from terraform
 In this example scripts, we depoy a EC2 instance and RDS instance y AWS
+youn can check the terraform scripts and execute them in your environment or just execute the next instructions.
 
 ## Prerequisites:
  - CentOS 7
