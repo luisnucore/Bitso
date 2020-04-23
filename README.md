@@ -13,7 +13,7 @@ youn can check the terraform scripts and execute them in your environment or jus
   - 2.- Install wget using the next command  
     *yum install -y wget*
   - 3.- Copy and Paste the next line in the CLI  
-   *wget https://raw.githubusercontent.com/luisnucore/Bitso/master/deploy.sh; chmod 700 deploy.sh; ./deploy.sh*
+   *wget https://raw.githubusercontent.com/luisnucore/ExampleDeploy/master/deploy.sh; chmod 700 deploy.sh; ./deploy.sh*
   - 4.- Provide the Information requested by the script
   - 5.- Done  
 
