@@ -1,4 +1,5 @@
-# BitsoChallenge
+# Example Deploying in AWS from terraform
+In this example scripts, we depoy a EC2 instance and RDS instance y AWS
 
 ## Prerequisites:
  - CentOS 7
