@@ -1,6 +1,6 @@
 #!/bin/bash
 if [[ $EUID -eq 0 ]]; then
-    echo "Deployin' Bitso Challenge on CentOS/RedHat 7 \n \n"
+    echo "Deployin' EC2 and RDS in AWS on CentOS/RedHat 7 \n \n"
     echo "Please Provide the AWS Access Key ID"
     read keyid
     echo "Please Provide the AWS Access Key"
@@ -20,9 +20,9 @@ if [[ $EUID -eq 0 ]]; then
     fi
     echo "installing Git"
     yum install -y git
-    mkdir /opt/bitsochallenge
-    cd /opt/bitsochallenge
-    git clone https://github.com/luisnucore/Bitso
+    mkdir /opt/exampledeploy
+    cd /opt/exampledeploy
+    git clone https://raw.githubusercontent.com/luisnucore/ExampleDeploy/
     echo "export AWSACCESS_KEY_ID=$keyid" >> ~/.bash_profile
     echo "export AWSSECRET_ACCESS_KEY=$key" >> ~/.bash_profile
     . ~/.bash_profile
@@ -35,9 +35,9 @@ if [[ $EUID -eq 0 ]]; then
     terraform plan  -var "id=$AWSACCESS_KEY_ID"   -var "key=$AWSSECRET_ACCESS_KEY" -var "keyname=$keynom"
     terraform apply --auto-approve  -var "id=$AWSACCESS_KEY_ID"   -var "key=$AWSSECRET_ACCESS_KEY" -var "keyname=$keynom"
 
-    echo "The Scripts used to deploy this infrastrucure are located at /opt/bitsochallenge/Bitso/ in this OS"
+    echo "The Scripts used to deploy this infrastrucure are located at /opt/exampledeploy in this OS"
     echo "The Infrastructure has been deployed in AWS, region Oregon, check your AWS console ;)"
-    echo "Now you can go ahead and type the in your webbrowser http://$(terraform output instance_ips)"
+    echo "Now you can go ahead and type in your webbrowser http://$(terraform output instance_ips)"
     echo "you can also access via ssh to the EC2 instance using ssh -i <key.pem> ubuntu@$(terraform output instance_ips)"
 else
   echo "This script must be run as root"
